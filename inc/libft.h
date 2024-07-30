@@ -6,7 +6,7 @@
 /*   By: dbajeux <dbajeux@student.19.be>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/08 15:51:58 by dbajeux           #+#    #+#             */
-/*   Updated: 2024/07/30 14:40:43 by dbajeux          ###   ########.fr       */
+/*   Updated: 2024/07/30 15:01:51 by dbajeux          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,10 +18,10 @@
 /* ************************************************************************** */
 
 # include <limits.h>
+# include <stdarg.h>
 # include <stddef.h>
 # include <stdlib.h>
 # include <unistd.h>
-# include <stdarg.h>
 
 /* ************************************************************************** */
 /*                                 STRUCT                                     */
@@ -109,14 +109,15 @@ void				ft_lstdelone(t_list *lst, void (*del)(void *));
 /*                                 FT_PRINTF                                  */
 /* ************************************************************************** */
 
-int		ft_printf(const char *str, ...);
-int		ft_putstr(char *str, int count);
-size_t	ft_putnbr(long int nb, int count);
-int		ft_putchar(char c, int count);
-int		ft_putadress(void *format, int count);
-int		ft_putunsigned(unsigned int nb, int count);
-int		ft_puthex(unsigned long int nb, const char *base, int count);
-int		ft_strchr_printf(const char *s, int c);
+int					ft_printf(const char *str, ...);
+int					ft_putstr(char *str, int count);
+size_t				ft_putnbr(long int nb, int count);
+int					ft_putchar(char c, int count);
+int					ft_putadress(void *format, int count);
+int					ft_putunsigned(unsigned int nb, int count);
+int					ft_puthex(unsigned long int nb, const char *base,
+						int count);
+int					ft_strchr_printf(const char *s, int c);
 
 /* ************************************************************************** */
 /*                                 GET_NEXT_LINE                              */
@@ -126,11 +127,11 @@ int		ft_strchr_printf(const char *s, int c);
 #  define BUFFER_SIZE 10
 # endif
 
-char	*ft_strjoin_gnl(char *s1, char *s2);
-char	*ft_substr_gnl(char *s, unsigned int start, size_t len);
-char	*ft_fill_storage(int fd, char *storage);
-char	*ft_clean_line(char *storage);
-char	*ft_clean_storage(char *storage);
-char	*get_next_line(int fd);
-char	*ft_free(char **str);
+char				*ft_strjoin_gnl(char *s1, char *s2);
+char				*ft_substr_gnl(char *s, unsigned int start, size_t len);
+char				*ft_fill_storage(int fd, char *storage);
+char				*ft_clean_line(char *storage);
+char				*ft_clean_storage(char *storage);
+char				*get_next_line(int fd);
+char				*ft_free(char **str);
 #endif

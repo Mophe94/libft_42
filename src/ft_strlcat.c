@@ -6,7 +6,7 @@
 /*   By: dbajeux <dbajeux@student.19.be>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/09 17:09:31 by dbajeux           #+#    #+#             */
-/*   Updated: 2024/07/30 14:03:16 by dbajeux          ###   ########.fr       */
+/*   Updated: 2024/07/30 15:06:52 by dbajeux          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,22 +33,3 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 	dst[len_dst + i] = '\0';
 	return (len_dst + len_src);
 }
-
-// #include <string.h>
-// #include <stdio.h>
-
-// int	main(void)
-// {
-// 	char	dst[15] = "je suis";
-// 	char	*src;
-// 	size_t	size;
-
-// 	src = "< eh>";
-// 	size = 0;
-// 	size = ft_strlcat(dst, src, 15);
-// 	printf("Mine %s\n", dst);
-// 	printf("%zu\n", size);
-// 	size = strlcat(dst, src, 15);
-// 	printf("Original %s\n", dst);
-// 	printf("%zu\n", size);
-// } 

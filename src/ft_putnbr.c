@@ -6,7 +6,7 @@
 /*   By: dbajeux <dbajeux@student.19.be>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/20 16:02:46 by dbajeux           #+#    #+#             */
-/*   Updated: 2024/07/30 14:11:04 by dbajeux          ###   ########.fr       */
+/*   Updated: 2024/07/30 15:05:51 by dbajeux          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,4 +28,3 @@ size_t	ft_putnbr(long int nb, int count)
 		count = ft_putchar(nb + 48, count);
 	return (count);
 }
-

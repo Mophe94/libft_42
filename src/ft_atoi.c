@@ -6,7 +6,7 @@
 /*   By: dbajeux <dbajeux@student.19.be>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/11 14:22:52 by dbajeux           #+#    #+#             */
-/*   Updated: 2024/07/30 14:20:36 by dbajeux          ###   ########.fr       */
+/*   Updated: 2024/07/30 15:02:24 by dbajeux          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,9 +20,9 @@ static int	ft_check(int sign)
 
 int	ft_atoi(const char *str)
 {
-	int					i;
-	int					sign;
-	unsigned long long	result;
+	int i;
+	int sign;
+	unsigned long long result;
 
 	i = 0;
 	sign = 1;

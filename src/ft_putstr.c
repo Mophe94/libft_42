@@ -6,7 +6,7 @@
 /*   By: dbajeux <dbajeux@student.19.be>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/20 15:49:05 by dbajeux           #+#    #+#             */
-/*   Updated: 2024/07/30 14:03:16 by dbajeux          ###   ########.fr       */
+/*   Updated: 2024/07/30 15:05:58 by dbajeux          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int	ft_putstr(char *str, int count)
 {
-	int	i;
+	int i;
 
 	i = 0;
 	if (!str)

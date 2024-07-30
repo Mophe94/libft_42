@@ -6,7 +6,7 @@
 /*   By: dbajeux <dbajeux@student.19.be>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/10 14:38:03 by dbajeux           #+#    #+#             */
-/*   Updated: 2024/07/30 14:39:58 by dbajeux          ###   ########.fr       */
+/*   Updated: 2024/07/30 15:07:54 by dbajeux          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,11 +39,10 @@ char	*ft_strjoin_gnl(char *s1, char *s2)
 	return (join);
 }
 
-
 char	*ft_substr_gnl(char *s, unsigned int start, size_t len)
 {
-	size_t	i;
-	char	*res;
+	size_t i;
+	char *res;
 
 	i = 0;
 	if (!s)

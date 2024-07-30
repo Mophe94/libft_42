@@ -6,7 +6,7 @@
 /*   By: dbajeux <dbajeux@student.19.be>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/10 14:37:42 by dbajeux           #+#    #+#             */
-/*   Updated: 2024/07/30 14:33:54 by dbajeux          ###   ########.fr       */
+/*   Updated: 2024/07/30 15:07:59 by dbajeux          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -81,8 +81,8 @@ char	*ft_fill_storage(int fd, char *storage)
 
 char	*get_next_line(int fd)
 {
-	static char	*storage = {0};
-	char		*line;
+	static char *storage = {0};
+	char *line;
 
 	if (fd < 0 || BUFFER_SIZE <= 0 || BUFFER_SIZE >= INT_MAX)
 		return (NULL);

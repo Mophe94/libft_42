@@ -6,7 +6,7 @@
 /*   By: dbajeux <dbajeux@student.19.be>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/08 15:24:58 by dbajeux           #+#    #+#             */
-/*   Updated: 2024/07/30 14:03:16 by dbajeux          ###   ########.fr       */
+/*   Updated: 2024/07/30 15:07:14 by dbajeux          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,13 +21,3 @@ size_t	ft_strlen(const char *s)
 		i++;
 	return (i);
 }
-
-// #include <stdio.h>
-
-// int	main(void)
-// {
-// 	char	*s;
-
-// 	s = "123456789";
-// 	printf("%zu", ft_strlen(s));
-// }

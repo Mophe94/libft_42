@@ -6,7 +6,7 @@
 /*   By: dbajeux <dbajeux@student.19.be>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/11 16:04:52 by dbajeux           #+#    #+#             */
-/*   Updated: 2024/07/30 14:20:24 by dbajeux          ###   ########.fr       */
+/*   Updated: 2024/07/30 15:03:36 by dbajeux          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 void	*ft_calloc(size_t count, size_t size)
 {
-	void	*memoryspace;
-	size_t	buff;
+	void *memoryspace;
+	size_t buff;
 
 	buff = count * size;
 	if (buff > INT_MAX || (size != 0 && (buff / size) != count))

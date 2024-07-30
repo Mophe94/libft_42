@@ -6,7 +6,7 @@
 /*   By: dbajeux <dbajeux@student.19.be>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/19 13:53:24 by dbajeux           #+#    #+#             */
-/*   Updated: 2024/07/30 14:03:16 by dbajeux          ###   ########.fr       */
+/*   Updated: 2024/07/30 15:06:42 by dbajeux          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,22 +25,3 @@ void	ft_striteri(char *s, void (*f)(unsigned int, char *))
 		i++;
 	}
 }
-
-// char	uppercase(unsigned int i, char * c)
-// {
-// 	if (i % 2 == 0)
-// 		return (ft_toupper(c));
-// 	else
-// 		return (c);
-// }
-
-// #include <stdio.h>
-
-// int	main(void)
-// {
-// 	char	*s;
-
-// 	s = "hello, world";
-// 	ft_striteri(s, &uppercase);
-// 	printf("%s", s);
-// }
