@@ -1,46 +1,97 @@
-# ************************************************************************** #
-#                                 DIRECTORIES                                #
-# ************************************************************************** #
-
-CC = cc
-
-CFLAGS = -Wall -Wextra -Werror
-
 NAME = libft.a
 
-SRCS = ft_calloc.c ft_isdigit.c ft_memcpy.c ft_strdup.c ft_strlen.c \
-		ft_strtrim.c ft_isalnum.c ft_isprint.c ft_memmove.c ft_strjoin.c \
-		ft_strncmp.c ft_substr.c ft_atoi.c ft_isalpha.c ft_memchr.c \
-		ft_memset.c ft_strlcat.c ft_strnstr.c ft_tolower.c ft_bzero.c \
-		ft_isascii.c ft_memcmp.c ft_strchr.c ft_strlcpy.c ft_strrchr.c \
-		ft_toupper.c ft_split.c ft_itoa.c ft_strmapi.c ft_striteri.c \
-		ft_putchar_fd.c ft_putstr_fd.c ft_putendl_fd.c ft_putnbr_fd.c
+CC = gcc
+CFLAGS = -Wall -Werror -Wextra
+INC_DIR = inc
+SRC_DIR = src
+OBJ_DIR = obj
+INC = -I$(INC_DIR)
 
-BSOURCE = ft_lstnew_bonus.c ft_lstadd_front_bonus.c  ft_lstsize_bonus.c \
-		ft_lstlast_bonus.c  ft_lstadd_back_bonus.c ft_lstdelone_bonus.c \
-		ft_lstclear_bonus.c ft_lstiter_bonus.c ft_lstmap_bonus.c \
+SRCS = \
+    $(SRC_DIR)/ft_atoi.c \
+    $(SRC_DIR)/ft_isalpha.c \
+    $(SRC_DIR)/ft_itoa.c \
+    $(SRC_DIR)/ft_lstdelone_bonus.c \
+    $(SRC_DIR)/ft_lstnew_bonus.c \
+    $(SRC_DIR)/ft_memcpy.c \
+    $(SRC_DIR)/ft_putendl_fd.c \
+    $(SRC_DIR)/ft_strchr.c \
+    $(SRC_DIR)/ft_strlcat.c \
+    $(SRC_DIR)/ft_strncmp.c \
+    $(SRC_DIR)/ft_substr.c \
+    $(SRC_DIR)/ft_bzero.c \
+    $(SRC_DIR)/ft_isascii.c \
+    $(SRC_DIR)/ft_lstadd_back_bonus.c \
+    $(SRC_DIR)/ft_lstiter_bonus.c \
+    $(SRC_DIR)/ft_lstsize_bonus.c \
+    $(SRC_DIR)/ft_memmove.c \
+    $(SRC_DIR)/ft_putnbr_fd.c \
+    $(SRC_DIR)/ft_strdup.c \
+    $(SRC_DIR)/ft_strlcpy.c \
+    $(SRC_DIR)/ft_strnstr.c \
+    $(SRC_DIR)/ft_tolower.c \
+    $(SRC_DIR)/ft_calloc.c \
+    $(SRC_DIR)/ft_isdigit.c \
+    $(SRC_DIR)/ft_lstadd_front_bonus.c \
+    $(SRC_DIR)/ft_lstlast_bonus.c \
+    $(SRC_DIR)/ft_memchr.c \
+    $(SRC_DIR)/ft_memset.c \
+    $(SRC_DIR)/ft_putstr_fd.c \
+    $(SRC_DIR)/ft_striteri.c \
+    $(SRC_DIR)/ft_strlen.c \
+    $(SRC_DIR)/ft_strrchr.c \
+    $(SRC_DIR)/ft_toupper.c \
+    $(SRC_DIR)/ft_isalnum.c \
+    $(SRC_DIR)/ft_isprint.c \
+    $(SRC_DIR)/ft_lstclear_bonus.c \
+    $(SRC_DIR)/ft_lstmap_bonus.c \
+    $(SRC_DIR)/ft_memcmp.c \
+    $(SRC_DIR)/ft_putchar_fd.c \
+    $(SRC_DIR)/ft_split.c \
+    $(SRC_DIR)/ft_strjoin.c \
+    $(SRC_DIR)/ft_strmapi.c \
+    $(SRC_DIR)/ft_strtrim.c
 
-OBJ = $(SRCS:.c=.o)
+OBJ = $(SRCS:$(SRC_DIR)/%.c=$(OBJ_DIR)/%.o)
 
-BOBJ = $(BSOURCE:.c=.o)
+RED = \033[31m
+YELLOW = \033[93m
+GREEN = \033[32m
+RESET = \033[0m
+BOLD = \033[1m
+UNDERLINE = \033[4m
 
-all : $(NAME)
+ICON_COMPILE = "🔨"
+ICON_CLEAN = "🧹"
+ICON_FCLEAN = "🗑️"
+ICON_REBUILD = "🔄"
+ICON_CONFETTI = "🎉"
 
-$(NAME) : $(OBJ)
-	ar rc $(NAME) $(OBJ)
+all: $(NAME)
+	@echo "$(BOLD)$(GREEN)Library $(NAME) has been created successfully!$(RESET)"
+	@echo "$(BOLD)$(GREEN)$(ICON_CONFETTI) Compilation successful! $(ICON_CONFETTI)$(RESET)"
+	@echo "🎊🎉🎊🎉🎊🎉🎊🎉🎊🎉🎊🎉🎊🎉🎊🎉🎊🎉🎊🎉🎊🎉🎊🎉🎊🎉🎊🎉🎊"
 
-bonus : $(OBJ) $(BOBJ)
-		ar rcs $(NAME) $(OBJ) $(BOBJ)
-%.o: %.c
-	$(CC) $(CFLAGS) -c $< -o $@
+$(NAME): $(OBJ)
+	@echo "$(BOLD)$(YELLOW)🏗️  Archiving $(NAME)... $(RESET)"
+	@ar rcs $@ $(OBJ)
+	@echo "$(BOLD)$(GREEN)$(ICON_CONFETTI) Library $(NAME) successfully created! $(ICON_CONFETTI)$(RESET)"
 
-clean :
-	rm -f $(OBJ) $(BOBJ)
+$(OBJ_DIR)/%.o: $(SRC_DIR)/%.c
+	@mkdir -p $(OBJ_DIR)
+	@echo -n "$(BOLD)$(YELLOW)🔨 Compiling $<... $(RESET)"
+	@$(CC) $(CFLAGS) -c $< -o $@ $(INC)
+	@echo "$(BOLD)$(YELLOW)🔨 Compiling $<... Done!$(RESET)"
+
+clean:
+	@rm -rf $(OBJ_DIR)
+	@echo "$(BOLD)$(RED)$(ICON_CLEAN) Cleaned up object files.$(RESET)"
 
 fclean: clean
-	rm -f $(NAME)
+	@rm -f $(NAME)
+	@echo "$(BOLD)$(RED)$(ICON_FCLEAN) Cleaned up all files.$(RESET)"
 
 re: fclean all
+	@echo "$(BOLD)$(YELLOW)$(ICON_REBUILD) Rebuild complete!$(RESET)"
 
-.PHONY : re clean fclean all bonus
-
+.PHONY: all clean fc
