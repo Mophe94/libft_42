@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dbajeux <dbajeux@student.s19.be>           +#+  +:+       +#+        */
+/*   By: dbajeux <dbajeux@student.19.be>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/11 14:22:52 by dbajeux           #+#    #+#             */
-/*   Updated: 2024/05/02 16:02:20 by dbajeux          ###   ########.fr       */
+/*   Updated: 2024/07/30 14:20:36 by dbajeux          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,21 +44,3 @@ int	ft_atoi(const char *str)
 	}
 	return (result * sign);
 }
-// #include <stdlib.h>
-// #include <stdio.h>
-
-// int	main(void)
-// {
-// 	char	*str;
-// 	char	*str1;
-// 	int		result;
-
-// 	str = "++595595";
-// 	str1 = "++595595";
-
-// 	result = 0;
-// 	result = ft_atoi(str);
-// 	printf("%d\n", result);
-// 	result = atoi(str1);
-// 	printf("%d", result);
-// }

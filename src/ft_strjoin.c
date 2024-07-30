@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dbajeux <dbajeux@student.s19.be>           +#+  +:+       +#+        */
+/*   By: dbajeux <dbajeux@student.19.be>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/12 14:46:39 by dbajeux           #+#    #+#             */
-/*   Updated: 2024/05/02 16:53:41 by dbajeux          ###   ########.fr       */
+/*   Updated: 2024/07/30 14:38:24 by dbajeux          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../inc/libft.h"
 
 char	*ft_strjoin(char const *s1, char const *s2)
 {
@@ -37,16 +37,3 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	str_join[i + ft_strlen(s1)] = '\0';
 	return (str_join);
 }
-// #include <stdio.h>
-
-// int	main(void)
-// {
-// 	char	*s1;
-// 	char	*s2;
-// 	char	*result;
-
-// 	s1 = "";
-// 	s2 = " comment va ?";
-// 	result = ft_strjoin(NULL, s2);
-// 	printf("%s", result);
-// }

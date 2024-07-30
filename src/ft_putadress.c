@@ -1,20 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalpha.c                                       :+:      :+:    :+:   */
+/*   ft_putadress.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dbajeux <dbajeux@student.19.be>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/08 12:25:11 by dbajeux           #+#    #+#             */
-/*   Updated: 2024/07/30 14:20:18 by dbajeux          ###   ########.fr       */
+/*   Created: 2024/05/24 19:27:45 by dbajeux           #+#    #+#             */
+/*   Updated: 2024/07/30 14:09:48 by dbajeux          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isalpha(int c)
-{
-	if ((c >= 65 && c <= 90) || (c >= 97 && c <= 122))
-		return (1);
-	else
-		return (0);
-}
+#include "../inc/libft.h"
 
+int	ft_putadress(void *format, int count)
+{
+	unsigned long	nb;
+	const char		*base = "0123456789abcdef";
+
+	nb = (unsigned long)format;
+	count = ft_putstr("0x", count);
+	count = ft_puthex(nb, base, count);
+	return (count);
+}

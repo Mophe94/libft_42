@@ -1,20 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalpha.c                                       :+:      :+:    :+:   */
+/*   ft_putstr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dbajeux <dbajeux@student.19.be>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/08 12:25:11 by dbajeux           #+#    #+#             */
-/*   Updated: 2024/07/30 14:20:18 by dbajeux          ###   ########.fr       */
+/*   Created: 2024/05/20 15:49:05 by dbajeux           #+#    #+#             */
+/*   Updated: 2024/07/30 14:03:16 by dbajeux          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isalpha(int c)
-{
-	if ((c >= 65 && c <= 90) || (c >= 97 && c <= 122))
-		return (1);
-	else
-		return (0);
-}
+#include "../inc/libft.h"
 
+int	ft_putstr(char *str, int count)
+{
+	int	i;
+
+	i = 0;
+	if (!str)
+	{
+		count += write(1, "(null)", 6);
+		return (count);
+	}
+	while (str[i] != '\0')
+	{
+		write(1, &str[i], 1);
+		count++;
+		i++;
+	}
+	return (count);
+}

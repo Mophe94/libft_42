@@ -1,20 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalpha.c                                       :+:      :+:    :+:   */
+/*   ft_putnbr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dbajeux <dbajeux@student.19.be>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/08 12:25:11 by dbajeux           #+#    #+#             */
-/*   Updated: 2024/07/30 14:20:18 by dbajeux          ###   ########.fr       */
+/*   Created: 2024/05/20 16:02:46 by dbajeux           #+#    #+#             */
+/*   Updated: 2024/07/30 14:11:04 by dbajeux          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isalpha(int c)
+#include "../inc/libft.h"
+
+size_t	ft_putnbr(long int nb, int count)
 {
-	if ((c >= 65 && c <= 90) || (c >= 97 && c <= 122))
-		return (1);
+	if (nb < 0)
+	{
+		count = ft_putchar('-', count);
+		nb *= -1;
+	}
+	if (nb > 9)
+	{
+		count = ft_putnbr(nb / 10, count);
+		count = ft_putnbr(nb % 10, count);
+	}
 	else
-		return (0);
+		count = ft_putchar(nb + 48, count);
+	return (count);
 }
 

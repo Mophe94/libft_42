@@ -1,20 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalpha.c                                       :+:      :+:    :+:   */
+/*   ft_putchar.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dbajeux <dbajeux@student.19.be>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/08 12:25:11 by dbajeux           #+#    #+#             */
-/*   Updated: 2024/07/30 14:20:18 by dbajeux          ###   ########.fr       */
+/*   Created: 2024/05/20 16:11:25 by dbajeux           #+#    #+#             */
+/*   Updated: 2024/07/30 14:00:09 by dbajeux          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isalpha(int c)
-{
-	if ((c >= 65 && c <= 90) || (c >= 97 && c <= 122))
-		return (1);
-	else
-		return (0);
-}
+#include "../inc/libft.h"
 
+int	ft_putchar(char c, int count)
+{
+	write(1, &c, 1);
+	count++;
+	return (count);
+}

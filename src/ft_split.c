@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dbajeux <dbajeux@student.s19.be>           +#+  +:+       +#+        */
+/*   By: dbajeux <dbajeux@student.19.be>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/18 10:56:53 by dbajeux           #+#    #+#             */
-/*   Updated: 2024/05/02 16:50:22 by dbajeux          ###   ########.fr       */
+/*   Updated: 2024/07/30 14:18:57 by dbajeux          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../inc/libft.h"
 
 static size_t	ft_count_word(char const *s, char c)
 {
@@ -103,20 +103,3 @@ char	**ft_split(char const *s, char c)
 	array = split(s, c, word_number, array);
 	return (array);
 }
-
-// #include <stdio.h>
-
-// int	main(void)
-// {
-// 	char	*s;
-// 	char	c;
-// 	char	**result;
-
-// 	s = "^^^1^^2a,^^^^3^^^^--h^^^^";
-// 	c = '^';
-// 	result = ft_split(s, c);
-// 	for (size_t i = 0; result[i]; i++)
-// 	{
-// 		printf("%s\n", result[i]);
-// 	}
-// }

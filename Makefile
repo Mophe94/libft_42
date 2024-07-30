@@ -50,7 +50,18 @@ SRCS = \
     $(SRC_DIR)/ft_split.c \
     $(SRC_DIR)/ft_strjoin.c \
     $(SRC_DIR)/ft_strmapi.c \
-    $(SRC_DIR)/ft_strtrim.c
+    $(SRC_DIR)/ft_strtrim.c \
+    $(SRC_DIR)/ft_printf.c \
+    $(SRC_DIR)/ft_putstr.c\
+    $(SRC_DIR)/ft_putnbr.c \
+    $(SRC_DIR)/ft_putchar.c \
+    $(SRC_DIR)/ft_putadress.c \
+    $(SRC_DIR)/ft_putunsigned.c \
+    $(SRC_DIR)/ft_puthex.c \
+    $(SRC_DIR)/ft_strchr_printf.c \
+    $(SRC_DIR)/get_next_line.c \
+    $(SRC_DIR)/get_next_line_utils.c \
+
 
 OBJ = $(SRCS:$(SRC_DIR)/%.c=$(OBJ_DIR)/%.o)
 

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_isprint.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dbajeux <dbajeux@student.s19.be>           +#+  +:+       +#+        */
+/*   By: dbajeux <dbajeux@student.19.be>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/08 14:45:35 by dbajeux           #+#    #+#             */
-/*   Updated: 2024/05/02 17:57:35 by dbajeux          ###   ########.fr       */
+/*   Updated: 2024/07/30 14:20:08 by dbajeux          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,19 +17,4 @@ int	ft_isprint(int c)
 	else
 		return (0);
 }
-// #include <stdio.h>
 
-// int	main(void)
-// {
-// 	int	c;
-
-// 	c = 31;
-// 	if (ft_isprint(c))
-// 	{
-// 		printf("is printable");
-// 	}
-// 	else
-// 	{
-// 		printf("is not printqble");
-// 	}
-// }

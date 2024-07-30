@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_calloc.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dbajeux <dbajeux@student.s19.be>           +#+  +:+       +#+        */
+/*   By: dbajeux <dbajeux@student.19.be>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/11 16:04:52 by dbajeux           #+#    #+#             */
-/*   Updated: 2024/05/02 17:57:14 by dbajeux          ###   ########.fr       */
+/*   Updated: 2024/07/30 14:20:24 by dbajeux          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../inc/libft.h"
 
 void	*ft_calloc(size_t count, size_t size)
 {
@@ -26,14 +26,3 @@ void	*ft_calloc(size_t count, size_t size)
 	ft_bzero(memoryspace, buff);
 	return (memoryspace);
 }
-
-// #include <stdlib.h>
-
-// int	main(void)
-// {
-// 	char	*str;
-
-// 	str = ft_calloc(INT_MIN, INT_MIN);
-// 	printf("<%s>\n",str);
-// 	free(str);
-// }

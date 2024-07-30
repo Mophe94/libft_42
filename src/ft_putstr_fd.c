@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putstr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dbajeux <dbajeux@student.s19.be>           +#+  +:+       +#+        */
+/*   By: dbajeux <dbajeux@student.19.be>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/19 15:03:16 by dbajeux           #+#    #+#             */
-/*   Updated: 2024/05/20 13:51:06 by dbajeux          ###   ########.fr       */
+/*   Updated: 2024/07/30 14:19:02 by dbajeux          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../inc/libft.h"
 
 void	ft_putstr_fd(char *s, int fd)
 {
@@ -28,12 +28,3 @@ void	ft_putstr_fd(char *s, int fd)
 	}
 }
 
-//  int	main(void)
-//  {
-// 		char	str[] = "Hello, World!";
-// 		char	error[] = "Error: File not found";
-
-// 		ft_putstr_fd(str, 1);
-// 		ft_putstr_fd(error, 2);
-// 		ft_putstr_fd("Hello", 0);
-//  }

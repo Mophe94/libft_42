@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dbajeux <dbajeux@student.s19.be>           +#+  +:+       +#+        */
+/*   By: dbajeux <dbajeux@student.19.be>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/18 16:47:11 by dbajeux           #+#    #+#             */
-/*   Updated: 2024/05/02 16:31:29 by dbajeux          ###   ########.fr       */
+/*   Updated: 2024/07/30 14:20:04 by dbajeux          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../inc/libft.h"
 
 static int	count_size_malloc(int c)
 {
@@ -65,14 +65,3 @@ char	*ft_itoa(int c)
 	res[len] = '\0';
 	return (res);
 }
-// #include <stdio.h>
-
-// int	main(void)
-// {
-// 	int		test;
-// 	char	*result;
-
-// 	test = -1244554945454545;
-// 	result = ft_itoa(test);
-// 	printf("%s", result);
-// }

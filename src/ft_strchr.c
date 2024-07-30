@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dbajeux <dbajeux@student.s19.be>           +#+  +:+       +#+        */
+/*   By: dbajeux <dbajeux@student.19.be>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/10 11:05:41 by dbajeux           #+#    #+#             */
-/*   Updated: 2024/05/02 16:51:11 by dbajeux          ###   ########.fr       */
+/*   Updated: 2024/07/30 14:39:12 by dbajeux          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../inc/libft.h"
 
 char	*ft_strchr(const char *s, int c)
 {
@@ -22,9 +22,7 @@ char	*ft_strchr(const char *s, int c)
 	while (str[i] != (char)c)
 	{
 		if (str[i] == '\0')
-		{
 			return (NULL);
-		}
 		i++;
 	}
 	return (str + i);
